@@ -55,6 +55,6 @@ public class SISRunner
 								}
 							}
 					        average=average/(myArray.length*myArray[0].length);
-					        System.out.println("The average is "+average);
+					        System.out.println(average);
 					     }
 	}
