@@ -4,6 +4,7 @@ public class SISRunner
 
 		public static void main(String[] args)
 			{
+
 				int num1 = 3;
 		        int num2 = 4;
 		        
@@ -13,6 +14,9 @@ public class SISRunner
 		        System.out.println(average);
 		        System.out.println(average);
 		        
+		        System.out.println("What is your favorite animal?");
+		        
+
 
 			}
 
