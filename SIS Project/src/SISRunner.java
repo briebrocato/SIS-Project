@@ -16,6 +16,8 @@ public class SISRunner
 		        
 		        System.out.println("What is your favorite animal?");
 		        
+		        System.out.println("What is your favorite color?");
+		        
 
 
 			}
