@@ -9,7 +9,7 @@ public class SISRunner
 				System.out.println();
 				System.out.println("Bye world");
 				
-				System.out.println("What is your favorite color???");
+				System.out.println("What is your favorite color?");
 
 			}
 
