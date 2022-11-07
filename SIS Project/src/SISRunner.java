@@ -18,6 +18,11 @@ public class SISRunner
 		        
 		        
 		        
+		        
+		        
+		        AddStudent.addStudent();
+		        
+		        
 		        System.out.println("Matthew is back");
 
 			}
