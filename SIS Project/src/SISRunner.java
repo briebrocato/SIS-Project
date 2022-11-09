@@ -17,7 +17,7 @@ public class SISRunner
 				{
 				//Add/delete student
 				}
-			else if(response == 2)
+			else if(response == 2) 
 				{
 				//change student
 				}
