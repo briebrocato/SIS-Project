@@ -6,6 +6,42 @@ public class AddStudent
 		static Scanner userInput = new Scanner(System.in);
 		static Scanner userIntput1 = new Scanner(System.in);
 		
+		public static void menu() {
+			
+			System.out.println("Would you like to (1) add or (2) delete a student?");
+			int input = userInput.nextInt();
+			if(input == 1) {
+				addStudent();
+			}
+			else if(input == 2) {
+				deleteStudent();
+			}
+			else {
+				menu();
+			}
+		}
+		
+		public static void deleteStudent()
+			{
+				
+				System.out.println("Pick a Student to Delete: ");
+				// lists students
+				
+				System.out.println();
+				System.out.println("Are you sure you want to delete " + Student.roster.getFirstName.get() + " (1) Yes (2) No" );
+				int delete = userInput.nextInt();
+				if(delete == 1) {
+					// deletes
+				}
+				else if(delete == 2) {
+					
+					//Return
+				}
+				else {
+					deleteStudent();
+				}
+			}
+
 		public static void addStudent() {
 			System.out.println();
 			System.out.println("Add a Student");
@@ -27,7 +63,7 @@ public class AddStudent
 			System.out.print("Period Three Grade: ");
 			String periodThreeGrade = userInput.nextLine();
 			
-			// Adds students
+			Student.roster.add(new Student(firstName,lastName,periodOne,periodOneGrade,periodTwo,periodTwoGrade,periodThree,periodThreeGrade));
 			
 			
 			System.out.println();
@@ -44,12 +80,13 @@ public class AddStudent
 			int adding = userIntput1.nextInt();
 			if(adding == 1) {
 				
-				
+				System.out.println(Student.roster.getFirstName( + Student.roster.getLastName() + " has been added to the roster."));
 				
 			}
 			else if(adding == 2) {
 				
-				//removes and returns
+				int last = Student.roster.size();
+				Student.roaster.remove(last);
 				
 			}
 			else {
