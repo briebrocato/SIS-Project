@@ -4,16 +4,18 @@ public class Student
 
 		private String firstName;
 		private String lastName;
+		private double gpa;
 		private String firstPeriod;
 		private String firstPeriodGrade;
 		private String secondPeriod;
 		private String secondPeriodGrade;
 		private String thirdPeriod;
 		private String thirdPeriodGrade;
-	    public Student (String fN, String lN, String fp, String fpg, String sp, String spg, String tp, String tpg)
+	    public Student (String fN, String lN, double g, String fp, String fpg, String sp, String spg, String tp, String tpg)
 	        {
 	        	firstName=fN;
 	        	lastName=lN;
+	        	gpa=g;
 	        	firstPeriod=fp;
 	        	firstPeriodGrade=fpg;
 	        	secondPeriod=sp;
@@ -36,6 +38,14 @@ public class Student
 	    public void setLastName(String lastName)
 	        {
 	        this.lastName = lastName;
+	        }
+	    public double getGpa()
+	        {
+	        return gpa;
+	        }
+	    public void setGpa(double gpa)
+	        {
+	        this.gpa = gpa;
 	        }
 	    public String getFirstPeriod()
 	        {
