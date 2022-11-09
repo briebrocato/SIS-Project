@@ -16,7 +16,7 @@ public class Roster
 				String secondPeriodGrade;
 				String thirdPeriod;
 				String thirdPeriodGrade;
-				Scanner file = new Scanner(new File( "studentData.txt" ));
+				Scanner file = new Scanner(new File("studentData.txt"));
 				while(file.hasNext())
 					{
 						firstName=file.next();
