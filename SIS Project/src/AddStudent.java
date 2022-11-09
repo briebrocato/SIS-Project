@@ -27,13 +27,13 @@ public class AddStudent
 			System.out.print("Period Three Grade: ");
 			String periodThreeGrade = userInput.nextLine();
 			
-			//GPA
-			int GPA = 0;
+			// Adds students
+			
 			
 			System.out.println();
 			System.out.println("New Student Data: ");
 			System.out.println(" Name: " + firstName + " " + lastName);
-			System.out.println(" GPA: " + GPA);
+			System.out.println(" GPA: ");
 			System.out.println();
 			System.out.println(" Period 1: " + periodOne + "... " + periodOneGrade);
 			System.out.println(" Period 2: " + periodTwo + "... " + periodTwoGrade);
@@ -44,12 +44,12 @@ public class AddStudent
 			int adding = userIntput1.nextInt();
 			if(adding == 1) {
 				
-				// Adds Student
+				
 				
 			}
 			else if(adding == 2) {
 				
-				// Return
+				//removes and returns
 				
 			}
 			else {
