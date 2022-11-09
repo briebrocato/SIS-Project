@@ -16,7 +16,7 @@ public class SISRunner
 		        
 		        AddStudent.addStudent();
 		        
-		        
+		        System.out.println("");
 
 			}
 
