@@ -7,32 +7,36 @@ public class SISRunner
 			{
 			Scanner userInput = new Scanner(System.in);
 			
-			System.out.println("What would you like to do?");	
+			System.out.println("What would you like to do?");
 			System.out.println("1) add or delete a student");
 			System.out.println("2) change student grades/schedule");
 			System.out.println("3) sort students");
-			int response = userInput.nextInt();
+			int number = userInput.nextInt();
 			
-			if(response == 1)
+			if(number == 1)
 				{
-				//Add/delete student
+					//add/delete
 				}
-			else if(response == 2) 
+			else if (number == 2)
 				{
-				//change student
+					//change
 				}
-			else if(response == 3)
+			else if(number == 3)
 				{
-				//sort student
+				SortStudents.sortRoster();
 				}
-			else
-				{
-				System.out.println("That was not an option.");
-				}
+				
 			
 			
+				
+				
 			
-			
+//				Main Menu
+//				What would you like to do?
+//				add or delete a student
+//				change student grades/schedule
+//				sort students
+	
 				
 
 
