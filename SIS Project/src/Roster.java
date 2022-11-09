@@ -5,7 +5,7 @@ import java.io.IOException;
 public class Roster
 	{
 		static public ArrayList <Student> roster = new ArrayList <Student>();
-		public static void main(String[] args) throws IOException
+		public void rosterFill() throws IOException
 			{
 				String firstName;
 				String lastName;
