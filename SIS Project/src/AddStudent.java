@@ -1,3 +1,5 @@
+
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -6,7 +8,7 @@ public class AddStudent
 		static Scanner userInput = new Scanner(System.in);
 		static Scanner userIntput1 = new Scanner(System.in);
 		
-		public static void menu() {
+		public static void menu() throws IOException {
 			
 			System.out.println("Would you like to (1) add or (2) delete a student?");
 			int input = userInput.nextInt();
@@ -21,24 +23,39 @@ public class AddStudent
 			}
 		}
 		
-		public static void deleteStudent()
+		public static void deleteStudent() throws IOException 
 			{
 				
+				listsStudent();
 				System.out.println("Pick a Student to Delete: ");
-				// lists students
+				int delete = userInput.nextInt();
 				
 				System.out.println();
-				System.out.println("Are you sure you want to delete " + Student.roster.getFirstName.get() + " (1) Yes (2) No" );
-				int delete = userInput.nextInt();
-				if(delete == 1) {
-					// deletes
+				System.out.println("Are you sure you want to delete " +  Roster.roster.get(delete - 1).getFirstName() + " (1) Yes (2) No" );
+				int deleteCheck = userInput.nextInt();
+				if(deleteCheck == 1) {
+					Roster.roster.remove(delete - 1);
+					System.out.println();
+					SISRunner.main(null);
 				}
-				else if(delete == 2) {
-					
-					//Return
+				else if(deleteCheck == 2) {
+					System.out.println();
+					SISRunner.main(null);
 				}
 				else {
 					deleteStudent();
+				}
+				
+			}
+
+
+		private static void listsStudent()
+			{
+				System.out.println();
+				System.out.println("Student List:");
+				
+				for(int i = 0; i < Roster.roster.size(); i++) {
+					System.out.println(i+1 + ") " +Roster.roster.get(i).getFirstName() + " " + Roster.roster.get(i).getLastName());
 				}
 			}
 
@@ -63,13 +80,14 @@ public class AddStudent
 			System.out.print("Period Three Grade: ");
 			String periodThreeGrade = userInput.nextLine();
 			
-			Student.roster.add(new Student(firstName,lastName,periodOne,periodOneGrade,periodTwo,periodTwoGrade,periodThree,periodThreeGrade));
+			int Gpa = 0;
+			Roster.roster.add(new Student(firstName,lastName,Gpa,periodOne,periodOneGrade,periodTwo,periodTwoGrade,periodThree,periodThreeGrade));
 			
 			
 			System.out.println();
 			System.out.println("New Student Data: ");
 			System.out.println(" Name: " + firstName + " " + lastName);
-			System.out.println(" GPA: ");
+			System.out.println(" GPA: " + Gpa);
 			System.out.println();
 			System.out.println(" Period 1: " + periodOne + "... " + periodOneGrade);
 			System.out.println(" Period 2: " + periodTwo + "... " + periodTwoGrade);
@@ -80,13 +98,13 @@ public class AddStudent
 			int adding = userIntput1.nextInt();
 			if(adding == 1) {
 				
-				System.out.println(Student.roster.getFirstName( + Student.roster.getLastName() + " has been added to the roster."));
+				System.out.println(Roster.roster.get(Roster.roster.size()).getFirstName() + Roster.roster.get(Roster.roster.size()).getLastName() + " has been added to the roster.");
 				
 			}
 			else if(adding == 2) {
 				
-				int last = Student.roster.size();
-				Student.roaster.remove(last);
+				int last = Roster.roster.size();
+				Roster.roster.remove(last);
 				
 			}
 			else {
@@ -94,4 +112,6 @@ public class AddStudent
 			}
 			
 		}
+		
+		
 	}
