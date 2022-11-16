@@ -21,7 +21,7 @@ public class Roster
 					{
 						firstName=file.next();
 						lastName=file.next();
-						 gpa = 0.0;
+						gpa = 0.0;
 						firstPeriod=file.next();
 						firstPeriodGrade=file.next();
 						secondPeriod=file.next();
@@ -30,6 +30,7 @@ public class Roster
 						thirdPeriodGrade=file.next();
 						roster.add(new Student (firstName, lastName,gpa,firstPeriod,firstPeriodGrade,secondPeriod,secondPeriodGrade,thirdPeriod,thirdPeriodGrade));
 					}
+				
 				
 			}
 

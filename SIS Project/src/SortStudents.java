@@ -35,7 +35,7 @@ public class SortStudents
 		
 		public static void sortGPA()
 			{
-				
+			CalculateGPA.calculate();
 			}
 		
 		public static void sortPeriod()

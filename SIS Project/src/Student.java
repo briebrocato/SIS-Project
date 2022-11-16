@@ -4,14 +4,14 @@ public class Student
 
 		private String firstName;
 		private String lastName;
-		private double gpa;
+		private String gpa;
 		private String firstPeriod;
 		private String firstPeriodGrade;
 		private String secondPeriod;
 		private String secondPeriodGrade;
 		private String thirdPeriod;
 		private String thirdPeriodGrade;
-	    public Student (String fN, String lN, double g, String fp, String fpg, String sp, String spg, String tp, String tpg)
+	    public Student (String fN, String lN, String g, String fp, String fpg, String sp, String spg, String tp, String tpg)
 	        {
 	        	firstName=fN;
 	        	lastName=lN;
@@ -43,7 +43,7 @@ public class Student
 	        {
 	        return gpa;
 	        }
-	    public void setGpa(double gpa)
+	    public void setGpa(String gpa)
 	        {
 	        this.gpa = gpa;
 	        }
