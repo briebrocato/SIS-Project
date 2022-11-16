@@ -35,6 +35,7 @@ public class ChangeGrade
 				System.out.println("1) Grades");
 				System.out.println("2) Classes");
 				choiceChange = userIntInput.nextInt();
+				System.out.println("");
 				if(choiceChange==1)
 					{
 						changeGradesChoice();
@@ -57,6 +58,7 @@ public class ChangeGrade
 				System.out.println("2) Second Period Grades");
 				System.out.println("3) Third Period Grades");
 				choiceGrades = userIntInput.nextInt();
+				System.out.println("");
 				if(choiceGrades==1)
 					{
 						changeFirstGrade();
@@ -94,6 +96,7 @@ public class ChangeGrade
 				System.out.println("11) D-");
 				System.out.println("12) F");
 				changeGrade = userIntInput.nextInt();
+				System.out.println("");
 				if(changeGrade==1)
 					{
 						Roster.roster.get(student-1).setFirstPeriodGrade("A");
@@ -142,6 +145,7 @@ public class ChangeGrade
 					{
 						Roster.roster.get(student-1).setFirstPeriodGrade("F");
 					}
+				System.out.println("");
 				for (int i =0; i< Roster.roster.size(); i++)
 			        {
 			            System.out.println(Roster.roster.get(i).getFirstName()+" "+Roster.roster.get(i).getLastName()+" "+Roster.roster.get(i).getGpa()+" "+Roster.roster.get(i).getFirstPeriod()+" "+Roster.roster.get(i).getFirstPeriodGrade()+" "+Roster.roster.get(i).getSecondPeriod()+" "+Roster.roster.get(i).getSecondPeriodGrade()+" "+Roster.roster.get(i).getThirdPeriod()+" "+Roster.roster.get(i).getThirdPeriodGrade());
@@ -164,7 +168,9 @@ public class ChangeGrade
 				System.out.println("10) D");
 				System.out.println("11) D-");
 				System.out.println("12) F");
+				
 				changeGrade = userIntInput.nextInt();
+				System.out.println("");
 				if(changeGrade==1)
 					{
 						Roster.roster.get(student-1).setSecondPeriodGrade("A");
@@ -213,6 +219,7 @@ public class ChangeGrade
 					{
 						Roster.roster.get(student-1).setSecondPeriodGrade("F");
 					}
+				System.out.println("");
 				for (int i =0; i< Roster.roster.size(); i++)
 			        {
 			            System.out.println(Roster.roster.get(i).getFirstName()+" "+Roster.roster.get(i).getLastName()+" "+Roster.roster.get(i).getGpa()+" "+Roster.roster.get(i).getFirstPeriod()+" "+Roster.roster.get(i).getFirstPeriodGrade()+" "+Roster.roster.get(i).getSecondPeriod()+" "+Roster.roster.get(i).getSecondPeriodGrade()+" "+Roster.roster.get(i).getThirdPeriod()+" "+Roster.roster.get(i).getThirdPeriodGrade());
@@ -237,6 +244,7 @@ public class ChangeGrade
 				System.out.println("11) D-");
 				System.out.println("12) F");
 				changeGrade = userIntInput.nextInt();
+				System.out.println("");
 				if(changeGrade==1)
 					{
 						Roster.roster.get(student-1).setThirdPeriodGrade("A");
@@ -285,11 +293,12 @@ public class ChangeGrade
 					{
 						Roster.roster.get(student-1).setThirdPeriodGrade("F");
 					}
+				System.out.println("");
 				for (int i =0; i< Roster.roster.size(); i++)
 			        {
 			            System.out.println(Roster.roster.get(i).getFirstName()+" "+Roster.roster.get(i).getLastName()+" "+Roster.roster.get(i).getGpa()+" "+Roster.roster.get(i).getFirstPeriod()+" "+Roster.roster.get(i).getFirstPeriodGrade()+" "+Roster.roster.get(i).getSecondPeriod()+" "+Roster.roster.get(i).getSecondPeriodGrade()+" "+Roster.roster.get(i).getThirdPeriod()+" "+Roster.roster.get(i).getThirdPeriodGrade());
 			        }
-				
+
 			}
 		private static void changeClassesChoice()
 			{
@@ -299,6 +308,7 @@ public class ChangeGrade
 				System.out.println("2) Second Period ");
 				System.out.println("3) Third Period ");
 				choiceClasses = userIntInput.nextInt();
+				System.out.println("");
 				if(choiceClasses==1)
 					{
 						changeFirstClass();
@@ -326,6 +336,7 @@ public class ChangeGrade
 				System.out.println("2) English");
 				System.out.println("3) Algebra");
 				changeClasses = userIntInput.nextInt();
+				System.out.println("");
 				if(changeClasses==1)
 					{
 						Roster.roster.get(student-1).setFirstPeriodGrade("Biology");
@@ -338,7 +349,7 @@ public class ChangeGrade
 					{
 						Roster.roster.get(student-1).setFirstPeriodGrade("Algebra");
 					}
-				
+				System.out.println("");
 			}
 		private static void changeSecondClass()
 			{
@@ -349,6 +360,7 @@ public class ChangeGrade
 				System.out.println("2) English");
 				System.out.println("3) Algebra");
 				changeClasses = userIntInput.nextInt();
+				System.out.println("");
 				if(changeClasses==1)
 					{
 						Roster.roster.get(student-1).setSecondPeriodGrade("Biology");
@@ -361,7 +373,11 @@ public class ChangeGrade
 					{
 						Roster.roster.get(student-1).setSecondPeriodGrade("Algebra");
 					}
-				
+				System.out.println("");
+				for (int i =0; i< Roster.roster.size(); i++)
+			        {
+			            System.out.println(Roster.roster.get(i).getFirstName()+" "+Roster.roster.get(i).getLastName()+" "+Roster.roster.get(i).getGpa()+" "+Roster.roster.get(i).getFirstPeriod()+" "+Roster.roster.get(i).getFirstPeriodGrade()+" "+Roster.roster.get(i).getSecondPeriod()+" "+Roster.roster.get(i).getSecondPeriodGrade()+" "+Roster.roster.get(i).getThirdPeriod()+" "+Roster.roster.get(i).getThirdPeriodGrade());
+			        }
 			}
 		private static void changeThirdClass()
 			{
@@ -372,6 +388,7 @@ public class ChangeGrade
 				System.out.println("2) English");
 				System.out.println("3) Algebra");
 				changeClasses = userIntInput.nextInt();
+				System.out.println("");
 				if(changeClasses==1)
 					{
 						Roster.roster.get(student-1).setThirdPeriodGrade("Biology");
@@ -384,6 +401,7 @@ public class ChangeGrade
 					{
 						Roster.roster.get(student-1).setThirdPeriodGrade("Algebra");
 					}
+				System.out.println("");
 				for (int i =0; i< Roster.roster.size(); i++)
 			        {
 			            System.out.println(Roster.roster.get(i).getFirstName()+" "+Roster.roster.get(i).getLastName()+" "+Roster.roster.get(i).getGpa()+" "+Roster.roster.get(i).getFirstPeriod()+" "+Roster.roster.get(i).getFirstPeriodGrade()+" "+Roster.roster.get(i).getSecondPeriod()+" "+Roster.roster.get(i).getSecondPeriodGrade()+" "+Roster.roster.get(i).getThirdPeriod()+" "+Roster.roster.get(i).getThirdPeriodGrade());
