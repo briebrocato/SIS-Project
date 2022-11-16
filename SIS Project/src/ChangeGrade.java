@@ -36,6 +36,7 @@ public class ChangeGrade
 				System.out.println("2) Classes");
 				choiceChange = userIntInput.nextInt();
 				System.out.println("");
+				System.out.println("");
 				if(choiceChange==1)
 					{
 						changeGradesChoice();
