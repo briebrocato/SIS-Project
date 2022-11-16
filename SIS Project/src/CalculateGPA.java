@@ -89,7 +89,6 @@ public class CalculateGPA
 			double average = add/3;
 			DecimalFormat d = new DecimalFormat("0.00");
 			Roster.roster.get(i).setGpa(d.format(average));
-			System.out.println(average);
 			add = 0.00;
 			}
 	
