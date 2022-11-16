@@ -6,7 +6,11 @@ import java.util.Scanner;
 public class AddStudent
 	{
 		static Scanner userInput = new Scanner(System.in);
-		static Scanner userIntput1 = new Scanner(System.in);
+		static Scanner userInput1 = new Scanner(System.in);
+		static Scanner userInput2 = new Scanner(System.in);
+		static Scanner userInput3 = new Scanner(System.in);
+		static Scanner userInput4 = new Scanner(System.in);
+		static Scanner userInput5 = new Scanner(System.in);
 		
 		public static void menu() throws IOException {
 			
@@ -36,18 +40,18 @@ public class AddStudent
 				if(deleteCheck == 1) {
 					Roster.roster.remove(delete - 1);
 					System.out.println();
-					SISRunner.main(null);
+					listsStudent();
+					SISRunner.menu();
 				}
 				else if(deleteCheck == 2) {
 					System.out.println();
-					SISRunner.main(null);
+					SISRunner.menu();
 				}
 				else {
 					deleteStudent();
 				}
 				
 			}
-
 
 		private static void listsStudent()
 			{
@@ -59,29 +63,30 @@ public class AddStudent
 				}
 			}
 
-		public static void addStudent() {
+		public static void addStudent() throws IOException {
 			System.out.println();
 			System.out.println("Add a Student");
 			System.out.println();
 			System.out.print("First Name: ");
-			String firstName = userInput.nextLine();
+			String firstName = userInput1.nextLine();
 			System.out.print("Last Name: ");
-			String lastName = userInput.nextLine();
+			String lastName = userInput1.nextLine();
 			System.out.print("Period One: ");
-			String periodOne = userInput.nextLine();
+			String periodOne = userInput2.nextLine();
 			System.out.print("Period One Grade: ");
-			String periodOneGrade = userInput.nextLine();
+			String periodOneGrade = userInput2.nextLine();
 			System.out.print("Period Two: ");
-			String periodTwo = userIntput1.nextLine();
+			String periodTwo = userInput3.nextLine();
 			System.out.print("Period Two Grade: ");
-			String periodTwoGrade = userInput.nextLine();
+			String periodTwoGrade = userInput3.nextLine();
 			System.out.print("Period Three: ");
-			String periodThree = userIntput1.nextLine();
+			String periodThree = userInput4.nextLine();
 			System.out.print("Period Three Grade: ");
-			String periodThreeGrade = userInput.nextLine();
+			String periodThreeGrade = userInput4.nextLine();
 			
+			// Calculate GPA
 			int Gpa = 0;
-			Roster.roster.add(new Student(firstName,lastName,Gpa,periodOne,periodOneGrade,periodTwo,periodTwoGrade,periodThree,periodThreeGrade));
+			
 			
 			
 			System.out.println();
@@ -95,16 +100,16 @@ public class AddStudent
 			
 			System.out.println();
 			System.out.println("Are you sure you want to add this student? (1) Yes (2) No");
-			int adding = userIntput1.nextInt();
+			int adding = userInput5.nextInt();
 			if(adding == 1) {
 				
-				System.out.println(Roster.roster.get(Roster.roster.size()).getFirstName() + Roster.roster.get(Roster.roster.size()).getLastName() + " has been added to the roster.");
-				
+				Roster.roster.add(new Student(firstName,lastName,Gpa,periodOne,periodOneGrade,periodTwo,periodTwoGrade,periodThree,periodThreeGrade));
+				System.out.println(Roster.roster.get(Roster.roster.size()-1).getFirstName() + Roster.roster.get(Roster.roster.size()-1).getLastName() + " has been added to the roster.");
+				SISRunner.menu();
 			}
 			else if(adding == 2) {
 				
-				int last = Roster.roster.size();
-				Roster.roster.remove(last);
+				SISRunner.menu();
 				
 			}
 			else {
