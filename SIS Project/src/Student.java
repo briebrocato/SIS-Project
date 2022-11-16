@@ -39,7 +39,7 @@ public class Student
 	        {
 	        this.lastName = lastName;
 	        }
-	    public double getGpa()
+	    public String getGpa()
 	        {
 	        return gpa;
 	        }
