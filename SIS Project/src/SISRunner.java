@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 import java.io.IOException;
 
@@ -6,9 +7,16 @@ public class SISRunner
 
 		public static void main(String[] args) throws IOException
 			{
+				Roster.rosterFill();	
+				menu();
+					
+			}
+		
+		
+		static void menu() throws IOException
+			{
+				System.out.println();
 				Scanner userInput = new Scanner(System.in);
-				
-				
 				
 				System.out.println("What would you like to do?");
 				System.out.println("1) add or delete a student");
@@ -18,7 +26,7 @@ public class SISRunner
 				
 				if(number == 1)
 					{
-						//add/delete
+						AddStudent.menu();
 					}
 				else if (number == 2)
 					{
@@ -28,26 +36,16 @@ public class SISRunner
 					{
 					SortStudents.sortRoster();
 					}
-					
+		
+
+				
 			}
+			
+
+			}
+
 		
 		
-			
-			
-			
-			
-				
-				
-			
-//				Main Menu
-//				What would you like to do?
-//				add or delete a student
-//				change student grades/schedule
-//				sort students
-	
-				
+		
 
 
-
-			
-}

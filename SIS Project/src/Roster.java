@@ -9,7 +9,7 @@ public class Roster
 			{
 				String firstName;
 				String lastName;
-				double gpa;
+				String gpa;
 				String firstPeriod;
 				String firstPeriodGrade;
 				String secondPeriod;
@@ -21,14 +21,14 @@ public class Roster
 					{
 						firstName=file.next();
 						lastName=file.next();
-						gpa = 0.0;
+						gpa = "0.00";
 						firstPeriod=file.next();
 						firstPeriodGrade=file.next();
 						secondPeriod=file.next();
 						secondPeriodGrade=file.next();
 						thirdPeriod=file.next();
 						thirdPeriodGrade=file.next();
-						roster.add(new Student (firstName, lastName,gpa,firstPeriod,firstPeriodGrade,secondPeriod,secondPeriodGrade,thirdPeriod,thirdPeriodGrade));
+						roster.add(new Student(firstName, lastName,gpa,firstPeriod,firstPeriodGrade,secondPeriod,secondPeriodGrade,thirdPeriod,thirdPeriodGrade));
 					}
 				
 				
