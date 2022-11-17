@@ -1,5 +1,6 @@
 import java.text.DecimalFormat;
 
+
 public class CalculateGPA
 	{
 	public static void calculate()

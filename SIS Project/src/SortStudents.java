@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Collections;
 import java.util.Arrays;
 
 public class SortStudents
@@ -31,37 +32,55 @@ public class SortStudents
 		
 		public static void sortLastName()
 			{
-				
+			SortName sortName = new SortName();
+			Collections.sort(Roster.roster, sortName);
+			
+			
+			for(int i = 0; i < Roster.roster.size(); i ++)
+			{
+			System.out.println(Roster.roster.get(i).getFirstName() + " " + Roster.roster.get(i).getLastName() + "   " + 
+			Roster.roster.get(i).getGpa() + "   " + Roster.roster.get(i).getFirstPeriod() + " " + Roster.roster.get(i).getFirstPeriodGrade() + "   " + Roster.roster.get(i).getSecondPeriod() + " " + 
+					Roster.roster.get(i).getFirstPeriodGrade() + "   " + Roster.roster.get(i).getThirdPeriod() + " " + Roster.roster.get(i).getThirdPeriodGrade());	
+			}
+			
+			
+			
 			}
 		
 		public static void sortGPA()
 			{
-			CalculateGPA.calculate();
+			SortGPA sortGPA = new SortGPA();
+			Collections.sort(Roster.roster, sortGPA);
 			
-			
-			
-			
-			
-//			String[] gpas = new String[Roster.roster.size()];
-//			
-//			
-//			for(int i = 0; i < Roster.roster.size(); i++)
-//				{
-//				gpas[i] = Roster.roster.get(i).getGpa();	
-//				}
-//			
-//			Arrays.sort(gpas);	
-//			for(int i = 0; i < Roster.roster.size(); i++)
-//				{
-//				System.out.println(gpas[i]);	
-//				}
+			for(int i = 0; i < Roster.roster.size(); i ++)
+				{
+				System.out.println(Roster.roster.get(i).getFirstName() + " " + Roster.roster.get(i).getLastName() + "   " + 
+				Roster.roster.get(i).getGpa() + "   " + Roster.roster.get(i).getFirstPeriod() + " " + Roster.roster.get(i).getFirstPeriodGrade() + "   " + Roster.roster.get(i).getSecondPeriod() + " " + 
+						Roster.roster.get(i).getFirstPeriodGrade() + "   " + Roster.roster.get(i).getThirdPeriod() + " " + Roster.roster.get(i).getThirdPeriodGrade());	
+				}
+		
 			
 			}
 		
+	
+		
 		public static void sortPeriod()
 			{
-				
+			SortPer sortPer = new SortPer();
+			Collections.sort(Roster.roster, sortPer);
+			
+			
+			
+			for(int i = 0; i < Roster.roster.size(); i ++)
+				{
+				System.out.println(Roster.roster.get(i).getFirstName() + " " + Roster.roster.get(i).getLastName() + "   " + 
+				Roster.roster.get(i).getGpa() + "   " + Roster.roster.get(i).getFirstPeriod() + " " + Roster.roster.get(i).getFirstPeriodGrade() + "   " + Roster.roster.get(i).getSecondPeriod() + " " + 
+						Roster.roster.get(i).getFirstPeriodGrade() + "   " + Roster.roster.get(i).getThirdPeriod() + " " + Roster.roster.get(i).getThirdPeriodGrade());	
+				}
 			}
 		
 		
 	}
+
+
+
