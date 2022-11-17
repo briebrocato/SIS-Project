@@ -28,7 +28,7 @@ public class SISRunner
 				
 				if(number == 1)
 					{
-						AddStudent.menu();
+					AddStudent.menu();
 					}
 				else if (number == 2)
 					{
@@ -37,6 +37,10 @@ public class SISRunner
 				else if(number == 3)
 					{
 					SortStudents.sortRoster();
+					}
+				else 
+					{
+					menu();
 					}
 		
 				
