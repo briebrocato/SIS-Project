@@ -22,9 +22,6 @@ public class SISRunner
 			{
 				System.out.println();
 				Scanner userInput = new Scanner(System.in);
-
-			Roster.rosterFill();
-			
 			System.out.println("What would you like to do?");
 			System.out.println("1) add or delete a student");
 			System.out.println("2) change student grades/schedule");
@@ -43,8 +40,13 @@ public class SISRunner
 				{
 				SortStudents.sortRoster();
 				}
+      else 
+					{
+					menu();
+					}
 
 			
+
 		
 				
 			}
