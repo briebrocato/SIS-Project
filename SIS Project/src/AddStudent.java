@@ -85,14 +85,14 @@ public class AddStudent
 			String periodThreeGrade = userInput4.nextLine();
 			
 			// Calculate GPA
-			int Gpa = 0;
+			String Gpa = "";
 			
 			
 			
 			System.out.println();
 			System.out.println("New Student Data: ");
 			System.out.println(" Name: " + firstName + " " + lastName);
-			System.out.println(" GPA: " + Gpa);
+			System.out.println(" GPA: " + "will be calculated...");
 			System.out.println();
 			System.out.println(" Period 1: " + periodOne + "... " + periodOneGrade);
 			System.out.println(" Period 2: " + periodTwo + "... " + periodTwoGrade);
@@ -104,7 +104,9 @@ public class AddStudent
 			if(adding == 1) {
 				
 				Roster.roster.add(new Student(firstName,lastName,Gpa,periodOne,periodOneGrade,periodTwo,periodTwoGrade,periodThree,periodThreeGrade));
+				CalculateGPA.calculate();
 				System.out.println(Roster.roster.get(Roster.roster.size()-1).getFirstName() + Roster.roster.get(Roster.roster.size()-1).getLastName() + " has been added to the roster.");
+				System.out.println("GPA: " + Roster.roster.get(Roster.roster.size() - 1).getGpa());
 				SISRunner.menu();
 			}
 			else if(adding == 2) {
