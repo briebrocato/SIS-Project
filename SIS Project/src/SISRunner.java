@@ -7,8 +7,10 @@ public class SISRunner
 
 		public static void main(String[] args) throws IOException
 			{
-				Roster.rosterFill();	
+				Roster.rosterFill();
+				CalculateGPA.calculate();
 				menu();
+				
 					
 			}
 		
@@ -37,10 +39,10 @@ public class SISRunner
 					SortStudents.sortRoster();
 					}
 		
-
 				
 			}
 			
+		
 
 			}
 
