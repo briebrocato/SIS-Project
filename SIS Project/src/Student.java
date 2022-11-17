@@ -2,6 +2,8 @@
 public class Student
 	{
 
+
+
 		private String firstName;
 		private String lastName;
 		private String gpa;
@@ -97,4 +99,5 @@ public class Student
 	        {
 	        this.thirdPeriodGrade = thirdPeriodGrade;
 	        }
+
 	}
